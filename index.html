@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 1 - To Do List</title>
-</head>
-<body>
+    <!-- Styles -->
+    <style>
+      ol{
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style-type: none;
+        font-size: 20px;
+        padding: 14px 10px 14px 40px;
+      }
+      li:nth-child(odd) {
+        background: grey;
+      }
+      li:nth-child(even) {
+        background: darkgray;
+      }
+      li{
+        font-size: 20px;
+      }
+
+    </style>
+  </head>
+  <!-- Content -->
+  <body>
     <h2>To do list</h2>
     <ul>
-        
+      <li>Pay bills</li>
+      <li>Read a book</li>
+      <li>Meet Anna</li>
+      <li>Wash dishes</li>
     </ul>
-</body>
+  </body>
+  <!-- JS Scripts -->
+  <script>
+    // Create a new list item when clicking on the "Add" button
+    function addListItem() {
+      var li = document.createElement(____);
+      var inputValue = document.getElementById(____).value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === "") {
+        alert("You must write something!");
+      } else {
+        document.getElementById(____).appendChild(li);
+      }
+      document.getElementById(____).value = "";
+    }
+  </script>
 </html>
