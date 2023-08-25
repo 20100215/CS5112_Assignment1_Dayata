@@ -6,7 +6,7 @@
     <title>Assignment 1 - To Do List</title>
     <!-- Styles -->
     <style>
-      ol{
+      ul {
         margin: 0;
         padding: 0;
       }
@@ -21,16 +21,20 @@
       li:nth-child(even) {
         background: darkgray;
       }
-      li{
+      li {
         font-size: 20px;
       }
-
     </style>
   </head>
   <!-- Content -->
   <body>
     <h2>To do list</h2>
-    <ul>
+    <form>
+      <input id="item" type="text" placeholder="Enter a task..." />
+      <button type="button" onclick="addListItem()">Add</button>
+    </form>
+    <br>
+    <ul id="list">
       <li>Pay bills</li>
       <li>Read a book</li>
       <li>Meet Anna</li>
@@ -41,16 +45,16 @@
   <script>
     // Create a new list item when clicking on the "Add" button
     function addListItem() {
-      var li = document.createElement(____);
-      var inputValue = document.getElementById(____).value;
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("item").value;
       var t = document.createTextNode(inputValue);
       li.appendChild(t);
       if (inputValue === "") {
         alert("You must write something!");
       } else {
-        document.getElementById(____).appendChild(li);
+        document.getElementById("list").appendChild(li);
       }
-      document.getElementById(____).value = "";
+      document.getElementById("item").value = "";
     }
   </script>
 </html>
